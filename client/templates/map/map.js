@@ -20,7 +20,7 @@ Meteor.startup(function(){
 	//Marker icons
 	var LeafIcon = L.Icon.extend({
 		options: {
-	        shadowUrl: 'map/leaf-shadow.png',
+	        shadowUrl: 'leaflet/leaf-shadow.png',
 	        iconSize:     [38, 95],
 	        shadowSize:   [50, 64],
 	        iconAnchor:   [22, 94],
@@ -28,9 +28,11 @@ Meteor.startup(function(){
 	        popupAnchor:  [-3, -76]
 	    }
 	})
-	var greenIcon = new LeafIcon({iconUrl: "map/leaf-green.png"});
+	var greenIcon = new LeafIcon({iconUrl: "leaflet/leaf-green.png"});
+	console.log(greenIcon);
 	// add a marker in the given location, attach some popup content to it and open the popup
-	L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map)
+	// L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map)
+	L.marker([51.5, -0.09]).addTo(map)
 	    .bindPopup('Custom leaf icon')
 	    .openPopup();
 
