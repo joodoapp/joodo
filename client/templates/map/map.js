@@ -3,9 +3,10 @@ Meteor.startup(function(){
 	canvas.height(canvas.width()/2);
 
 	//Map
-	var map = L.map('map-canvas', {
+	map = L.map('map-canvas', {
 		zoomControl: false
-	}).setView([51.505, -0.09], 13);
+	})
+	map.setView([43.4667, -80.516], 2)
 
 	//OpenStreetMap tile layer
 	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -29,10 +30,9 @@ Meteor.startup(function(){
 	    }
 	})
 	var greenIcon = new LeafIcon({iconUrl: "leaflet/leaf-green.png"});
-	console.log(greenIcon);
 	// add a marker in the given location, attach some popup content to it and open the popup
 	// L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map)
-	L.marker([51.5, -0.09],{icon: greenIcon}).addTo(map)
+	L.marker([43.4667, -80.516],{icon: greenIcon}).addTo(map)
 	    .bindPopup('Custom leaf icon')
 	    .openPopup();
 

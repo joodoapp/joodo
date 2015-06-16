@@ -5,12 +5,9 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
-twbs:bootstrap
 fortawesome:fontawesome
 jquery
 semantic:ui
-semantic:ui-sidebar
 semantic:ui-css
-semantic:ui-menu
+accounts-ui
+accounts-password
