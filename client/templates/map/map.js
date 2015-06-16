@@ -37,7 +37,7 @@ Meteor.startup(function(){
 	    .openPopup();
 
 	L.easyButton("fa-share-alt fa-flip-horizontal", 
-	              function () {$(".ui.sidebar").sidebar("toggle")},
+	              function () {$(".ui.sidebar").sidebar("setting","transition","scale down").sidebar("toggle")},
 	             "Timeline",
 	             map
 	            )
