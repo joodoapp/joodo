@@ -1,5 +1,8 @@
 Template.login.rendered = function(){
 	console.log("login rendered");
+	//Force login each time
+	Meteor.logout();
+	//Open login modal
 	$(".ui.modal")
 		.modal({
 			closable: false,

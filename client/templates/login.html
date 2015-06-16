@@ -5,7 +5,11 @@
   	{{> loginButtons align="left"}}
   </div>
   <div class="content">
+  	{{#if currentUser}}
+  	{{> trips}}
+  	{{else}}
 		WHAT IS THIS
+  	{{/if}}
   </div>
 	
 	<div class="actions">
@@ -13,4 +17,11 @@
 	</div>
 	
 </div>
+</template>
+
+<template name="trips">
+	<!-- Add trip -->
+	TRIP
+	<!-- Select a trip -->
+
 </template>

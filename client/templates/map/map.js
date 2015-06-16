@@ -4,6 +4,8 @@ Meteor.startup(function(){
 
 	//Map
 	map = L.map('map-canvas', {
+		minZoom: 2,
+		maxZoom: 10,
 		zoomControl: false
 	})
 	map.setView([43.4667, -80.516], 2)
