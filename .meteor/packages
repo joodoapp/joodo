@@ -10,3 +10,7 @@ insecure
 twbs:bootstrap
 fortawesome:fontawesome
 jquery
+semantic:ui
+semantic:ui-sidebar
+semantic:ui-css
+semantic:ui-menu

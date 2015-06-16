@@ -32,12 +32,12 @@ Meteor.startup(function(){
 	console.log(greenIcon);
 	// add a marker in the given location, attach some popup content to it and open the popup
 	// L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map)
-	L.marker([51.5, -0.09]).addTo(map)
+	L.marker([51.5, -0.09],{icon: greenIcon}).addTo(map)
 	    .bindPopup('Custom leaf icon')
 	    .openPopup();
 
-	L.easyButton("fa-bars", 
-	              function () {$("#wrapper").toggleClass("toggled");},
+	L.easyButton("fa-share-alt fa-flip-horizontal", 
+	              function () {$(".ui.sidebar").sidebar("toggle")},
 	             "Timeline",
 	             map
 	            )
