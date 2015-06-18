@@ -4,4 +4,4 @@ Accounts.ui.config({
 
 Accounts.onLogin(function(){
 	console.log("onLogin", Meteor.user());
-})
+});
