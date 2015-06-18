@@ -1,4 +1,4 @@
-sidebar = {
+chapters = {
 	init: function() {
 		console.log("sidebar.init");
 		console.log(Meteor.user())

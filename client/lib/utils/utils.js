@@ -22,16 +22,15 @@ login = {
 };
 nav = {
 	open: function() {
-		$("#nav-wrapper").slideDown(500);
+		$("#chapters-wrapper").slideDown(600);
 	},
 	close: function() {
-		console.log($("#nav-wrapper"));
-		$("#nav-wrapper").slideUp(500);
+		$("#chapters-wrapper").slideUp(600);
 	},
 	toggle: function() {
-		$("#nav-wrapper").slideToggle(500);	
+		$("#chapters-wrapper").slideToggle(600);	
 	}
-}
+};
 side = {
 	open: function() {
 		$(".ui.sidebar").sidebar("setting","transition","scale down").sidebar("show");
@@ -39,4 +38,4 @@ side = {
 	close: function() {
 		$(".ui.sidebar").sidebar("setting","transition","scale down").sidebar("hide");
 	}
-}
+};
