@@ -4,7 +4,12 @@
 	background-color: #658281;
 	background-image: url(backgrounds/shley_tree_1.png);
 }
-
+.add-stories-form {
+	/*height: 1000px;*/
+}
+.picker__holder {
+	height: 1000px;
+}
 /*CHAPTERS*/
 #chapters-wrapper {
 	width: 100%;

@@ -12,21 +12,20 @@
 
 <!-- This is a modal -->
 <template name="addStory">
-	<div class="ui basic modal add-story-modal">
+	<div class="ui long modal add-story-modal">
 		<div class="header">
 			<span>Add A Story</span><i class="ui large map icon"></i>
 
 		</div>
 		<!-- Content [Consider adding map as background] -->
-		<form class="ui form content">
+		<form class="ui form content add-story-form">
 		<!-- Basic Story data for adding to database -->
 		<div class="ui fluid field">
 			<!-- Text name for story [regex?] -->
 			<input type="text" name="name" placeholder="Name Your Story">
 		</div>
-		<div class="two fields">
-
-			<!-- Nest two date inputs together -->
+<!-- 		<div class="two fields">
+			Nest two date inputs together
 			<div class="field">
 				<label>When?</label>
 				<div class="two fields">
@@ -34,29 +33,57 @@
 						<input class="add-story-modal start-date">
 					</div>
 					<div class="field">
-						<!-- <input type="text" name="name" placeholder="Name Your Story"> -->
-						<div class="ui button">End</div>
 					</div>
 				</div>
 			</div>
-			<!-- Location input [searchbar?] for starting -->
+			Location input [searchbar?] for starting
 			<div class="field">
 				<label>Where?</label>
 				<div class="field">
 					<input type="text" name="name" placeholder="Name Your Story">
 				</div>
 			</div>
-		</div>
+		</div> -->
+			<div class="ui fluid steps">
+				<div class="step">
+					<div class="field">
+						<input type="text" placeholder="Starting Point">
+					</div>
+				</div>
+				<div class="step">
+					<div class="field">
+						<!-- <input class="add-story-modal start-date"> -->
+						<!-- <div class="ui button add-story-start-btn">Start Date</div> -->
+						<input class="add-story start-date">
+					</div>
+				</div>
+				<div class="step">
+					<div class="field">
+						<!-- <input class="add-story-modal end-date"> -->
+						<div class="ui button add-story-end-btn">End Date</div>
+					</div>
+				</div>
+			</div>
+			<div id="datepicker"></div>
+			<div id="start-date-picker"></div>
 		</form>
 		<div class="actions">Actions</div>
 	</div>
-</template>
 
-<template name="dateModal">
-	<div class="field">
-		<input class="add-story-modal start-date">
+	<div class="ui small modal add-story-start-modal">
+		<div class="content">
+
+		</div>
 	</div>
-	<div class="field">
-		<input type="text" name="name" placeholder="Name Your Story">
+	<div class="ui long modal add-story-end-modal">
+		<div class="header">header</div>
+		<div class="content">
+			sef 
+			<div class="ui input">
+			<input class="add-story-modal end-date">
+			</div>
+			<!-- <div id="end-date-picker"></div> -->
+			adw
+		</div>
 	</div>
 </template>
