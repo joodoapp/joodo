@@ -24,50 +24,30 @@
 			<!-- Text name for story [regex?] -->
 			<input type="text" name="name" placeholder="Name Your Story">
 		</div>
-<!-- 		<div class="two fields">
-			Nest two date inputs together
+		<div class="two fields">
+			<!-- Location input [searchbar?] for starting -->
 			<div class="field">
-				<label>When?</label>
+				<div class="field">
+					<input type="text" name="name" placeholder="Where does it start?">
+				</div>
+			</div>
+
+			<!-- Nest two date inputs together -->
+			<div class="field">
 				<div class="two fields">
 					<div class="field">
-						<input class="add-story-modal start-date">
+						<input class="add-story-start-date" placeholder="When does it start?">
 					</div>
 					<div class="field">
+						<input class="add-story-end-date" placeholder="Does it end?">
 					</div>
 				</div>
 			</div>
-			Location input [searchbar?] for starting
-			<div class="field">
-				<label>Where?</label>
-				<div class="field">
-					<input type="text" name="name" placeholder="Name Your Story">
-				</div>
-			</div>
-		</div> -->
-			<div class="ui fluid steps">
-				<div class="step">
-					<div class="field">
-						<input type="text" placeholder="Starting Point">
-					</div>
-				</div>
-				<div class="step">
-					<div class="field">
-						<!-- <input class="add-story-modal start-date"> -->
-						<!-- <div class="ui button add-story-start-btn">Start Date</div> -->
-						<input class="add-story start-date">
-					</div>
-				</div>
-				<div class="step">
-					<div class="field">
-						<!-- <input class="add-story-modal end-date"> -->
-						<div class="ui button add-story-end-btn">End Date</div>
-					</div>
-				</div>
-			</div>
+		</div>
+
 			<div id="datepicker"></div>
 			<div id="start-date-picker"></div>
 		</form>
-		<div class="actions">Actions</div>
 	</div>
 
 	<div class="ui small modal add-story-start-modal">
