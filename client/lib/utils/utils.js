@@ -16,7 +16,7 @@ login = {
 	},
 	close : function() {
 		$(".ui.modal.login-modal").modal("hide");
-		nav.close();
+		// nav.close();
 		side.open();
 	}
 };

@@ -12,3 +12,14 @@ Meteor.startup(function() {
 
 	}
 });
+
+
+//METHODS
+Meteor.methods({
+	//Accepts story object
+	addStory: function(s) {
+		Stories.insert(s, function(e,r){
+			console.log("addStory: ",e,r);
+		})
+	}
+})

@@ -11,3 +11,6 @@ semantic:ui
 semantic:ui-css
 accounts-ui
 accounts-password
+aldeed:simple-schema
+momentjs:moment
+aldeed:collection2

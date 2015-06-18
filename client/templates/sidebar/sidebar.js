@@ -1,7 +1,6 @@
 sidebar = {
 	init: function() {
 		console.log("sidebar.init");
-		console.log(Meteor.user())
 		var canvas = $("#timeline-canvas");
 		var svg = d3.select("#timeline-canvas")
 			.append("svg")
@@ -17,6 +16,7 @@ sidebar = {
 				"stroke":"gray",
 				"stroke-width":5
 			})
-
+		var o = {teller: "asd",name:"name",start:new Date(),end:new Date(),chapters:[]};
+		Meteor.call("addStory", o);
 	}
 };
