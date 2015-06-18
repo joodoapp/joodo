@@ -12,7 +12,7 @@
 
 <!-- This is a modal -->
 <template name="addStory">
-	<div class="ui long modal add-story-modal">
+	<div class="ui basic modal add-story-modal">
 		<div class="header">
 			<span>Add A Story</span><i class="ui large map icon"></i>
 
@@ -28,42 +28,38 @@
 			<!-- Location input [searchbar?] for starting -->
 			<div class="field">
 				<div class="field">
-					<input type="text" name="name" placeholder="Where does it start?">
+					<!-- <input type="text" name="name" placeholder="Where does it start?"> -->
+					<div class="ui search add-story-search">
+						<div class="ui icon input">
+							<input class="prompt" type="text" placeholder="Where does it start?">
+							<i class="marker icon"></i>
+						</div>
+						<div class="results">
+						</div>
+					</div>
 				</div>
 			</div>
-
 			<!-- Nest two date inputs together -->
 			<div class="field">
 				<div class="two fields">
-					<div class="field">
+					<div class="ui icon input field">
 						<input class="add-story-start-date" placeholder="When does it start?">
+						<i class="calendar icon"></i>
 					</div>
-					<div class="field">
+					<div class="ui icon input field">
 						<input class="add-story-end-date" placeholder="Does it end?">
+						<i class="calendar icon"></i>
 					</div>
 				</div>
 			</div>
 		</div>
-
-			<div id="datepicker"></div>
-			<div id="start-date-picker"></div>
 		</form>
-	</div>
-
-	<div class="ui small modal add-story-start-modal">
-		<div class="content">
-
-		</div>
-	</div>
-	<div class="ui long modal add-story-end-modal">
-		<div class="header">header</div>
-		<div class="content">
-			sef 
-			<div class="ui input">
-			<input class="add-story-modal end-date">
+		<!-- Callbacks -->
+		<div class="actions">
+			<div class="ui two fluid inverted buttons">
+				<div class="ui red inverted cancel button">Cancel</div>
+				<div class="ui green inverted ok button">Start</div>
 			</div>
-			<!-- <div id="end-date-picker"></div> -->
-			adw
 		</div>
 	</div>
 </template>

@@ -1,4 +1,3 @@
-console.log("utils");
 login = {
 	open : function() {
 		$(".ui.modal.login-modal")

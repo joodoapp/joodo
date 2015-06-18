@@ -22,6 +22,15 @@ sidebar = {
 	addStoryModal: function() {
 		//Init both add-story-modal and add-story-date-modal
 		$(".modal.add-story-modal")
+			.modal({
+				closable: false,
+				onDeny: function(){
+					console.log("addStory deny");
+				},
+				onApprove: function(){
+					console.log("addStory approve");
+				}
+			})
 			.modal("show");
 	}
 };
@@ -30,35 +39,18 @@ sidebar = {
 //This is the sidebar template that SemanticUI is transitioning
 Template.sidebar.events({
 	"click .add-story-button": function(e){
-		console.log("click .add-story-button", e);
 		sidebar.addStoryModal();
 	}
 });
 
 Template.addStory.rendered = function(e){
-	console.log("#", $(".add-story-start-date"));
+	//Start location search
+	$(".add-story-search")
+		.search({
+			source: [{ title: 'Andorra' },{ title: 'United Arab Emirates' },  { title: 'Afghanistan' },  { title: 'Antigua' },  { title: 'Anguilla' },  { title: 'Albania' },{ title: 'Armenia' },  { title: 'Netherlands Antilles' },  { title: 'Angola' },  { title: 'Argentina' },  { title: 'American Samoa' }]
+		});
+	//Start date picker
 	$(".add-story-start-date").datepicker();
-	//Initalize addStory, startDate endDate modals
-	// $(".add-story-start-modal, .add-story-end-modal, .add-story-modal").modal({
-	// 	closable: false
-	// });
-
-	// $(".add-story-start-btn").on("click", function(e){
-	// 	console.log(e);
-	
-		// $(".add-story-start-modal").modal("show");
-		// $(".add-story.start-date").pickadate({
-		// 	container: "#start-date-picker"
-		// });
-		// $(".add-story.start-date").pickadate("open");
-	// })
-	// $(".add-story-end-btn").on("click", function(e){
-		// $(".add-story-modal.end-date").pickadate({
-			// container: "#end-date-picker"
-		// });
-		// $(".add-story-modal").modal("hide")
-		// $(".add-story-end-modal").modal("show")
-		
-		// $(".add-story-modal.end-date").pickadate();
-	// })
+	//End date picker
+	$(".add-story-end-date").datepicker();
 }
