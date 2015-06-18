@@ -1,10 +1,60 @@
 <template name="sidebar">
 	<div class="ui center aligned segment">
-		<div class="fluid ui button">
+		{{> addStory}}
+		<div class="fluid ui button add-story-button">
 			<i class="big blue plus icon"></i>
 		</div>
 	</div>
 	<div id="timeline-canvas" class='item'>
 	</div>
 	<a class="item"><h2>JOOD<i class="github icon"></i></h2></a>
+</template>
+
+<!-- This is a modal -->
+<template name="addStory">
+	<div class="ui basic modal add-story-modal">
+		<div class="header">
+			<span>Add A Story</span><i class="ui large map icon"></i>
+
+		</div>
+		<!-- Content [Consider adding map as background] -->
+		<form class="ui form content">
+		<!-- Basic Story data for adding to database -->
+		<div class="ui fluid field">
+			<!-- Text name for story [regex?] -->
+			<input type="text" name="name" placeholder="Name Your Story">
+		</div>
+		<div class="two fields">
+			<!-- Nest two date inputs together -->
+			<div class="field">
+				<label>When?</label>
+				<div class="two fields">
+					<div class="field">
+						<input class="add-story-modal start-date">
+					</div>
+					<div class="field">
+						<input type="text" name="name" placeholder="Name Your Story">
+					</div>
+				</div>
+			</div>
+			<!-- Location input [searchbar?] for starting -->
+			<div class="field">
+				<label>Where?</label>
+				<div class="field">
+					<input type="text" name="name" placeholder="Name Your Story">
+				</div>
+			</div>
+		</div>
+		</form>
+		<div class="actions">Actions</div>
+	</div>
+</template>
+
+<template name="dateModal">
+	<div class="field">
+		<input class="add-story-modal start-date">
+	</div>
+	<div class="field">
+		<input type="text" name="name" placeholder="Name Your Story">
+	</div>
 </template>

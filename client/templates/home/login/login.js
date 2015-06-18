@@ -5,27 +5,25 @@ Accounts.onLogin(function(){
 	console.log("onLogin", Meteor.user());
 });
 
+
+// login TEMPLATE
+//This is the entire modal
 Template.login.rendered = function(){
 	//Force login each time
 	// Meteor.logout();	
 	//Open login modal
-	login.open();
+	// login.open();
 };
-
 Template.login.helpers({
-	enter: function() {
-		console.log("@enter");
-	}
 });
-
-
 Template.login.events({
 });
 
-Template.loggedIn.rendered = function(){
-	$(".login-enter").click(function(e){
-		//Close login modal
+// loggedIn TEMPLATE
+//This is the content that shows when the user signs in 
+Template.loggedIn.events({
+	//Enter joodo
+	"click .login-enter": function(e) {
 		login.close();
-	});
-
-}
+	}
+});

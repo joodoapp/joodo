@@ -16,7 +16,21 @@ sidebar = {
 				"stroke":"gray",
 				"stroke-width":5
 			})
-		var o = {teller: "asd",name:"name",start:new Date(),end:new Date(),chapters:[]};
-		Meteor.call("addStory", o);
+		// var o = {teller: "asd",name:"name",start:new Date(),end:new Date(),chapters:[]};
+		// Meteor.call("addStory", o);
+	},
+	addStoryModal: function() {
+		$(".basic.modal.add-story-modal")
+			.modal("show");
+		$(".add-story-modal.start-date").pickadate();
 	}
 };
+
+// sidebar TEMPLATE
+//This is the sidebar template that SemanticUI is transitioning
+Template.sidebar.events({
+	"click .add-story-button": function(e){
+		console.log("click .add-story-button", e);
+		sidebar.addStoryModal();
+	}
+});
