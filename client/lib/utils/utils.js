@@ -11,25 +11,25 @@ login = {
 				}
 			})
 			.modal("show");
-		nav.close();
-		side.open();
+		nav.open();
+		side.close();
 	},
 	close : function() {
 		$(".ui.modal.login-modal").modal("hide");
-		nav.open();
-		side.close();
+		nav.close();
+		side.open();
 	}
 };
 nav = {
 	open: function() {
-		$("#nav-wrapper").show();
+		$("#nav-wrapper").slideDown(500);
 	},
 	close: function() {
 		console.log($("#nav-wrapper"));
-		$("#nav-wrapper").hide(400);
+		$("#nav-wrapper").slideUp(500);
 	},
 	toggle: function() {
-		$("#nav-wrapper").toggle(400);	
+		$("#nav-wrapper").slideToggle(500);	
 	}
 }
 side = {

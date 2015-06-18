@@ -44,16 +44,17 @@ Template.map.rendered = function(){
 		    .bindPopup('Custom leaf icon')
 		    .openPopup();
 
-		// L.easyButton("fa-share-alt fa-flip-horizontal", 
-  //         	function() {
-  //         		side.open();
-  //         	}, "Timeline", map
-		//             );
+		//Navigational app buttons on map
 		L.easyButton("fa-arrows-v fa-lg",
 			function() {
 				nav.toggle();
 			}, "Nav", map
 			);
+		L.easyButton("fa-share-alt fa-flip-horizontal", 
+          	function() {
+          		side.open();
+          	}, "Timeline", map
+		            );
 
 	}
 	init();
