@@ -20,9 +20,11 @@ sidebar = {
 		// Meteor.call("addStory", o);
 	},
 	addStoryModal: function() {
+		//Init both add-story-modal and add-story-date-modal
 		$(".basic.modal.add-story-modal")
 			.modal("show");
-		$(".add-story-modal.start-date").pickadate();
+		$(".add-story-modal.start-date")
+			.pickadate();
 	}
 };
 
