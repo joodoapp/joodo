@@ -1,0 +1,23 @@
+<template name="login">
+<div class="ui basic modal login-modal">
+  <div class="header">
+  	<h1>Joodo</h1>
+  	{{> loginButtons align="left"}}
+  </div>
+  <div class="content">
+  	{{#if currentUser}}
+    {{> loggedIn}}
+  	{{else}}
+		PLEASE LOG IN
+  	{{/if}}
+    <div >
+    </div>
+  </div>	
+</div>
+</template>
+
+<template name="loggedIn">
+  <div class="ui button login-enter">
+    ENTER
+  </div>
+</template>
