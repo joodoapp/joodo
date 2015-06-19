@@ -52,12 +52,5 @@ newStory = {
 		Session.setDefault("newStory.location", {lat: 0, lng: 0});
 		Session.setDefault("newStory.start", new Date());
 
-	},
-	get: function(){
-		return {
-			name: Session.get("newStory.name"),
-			location: Session.get("newStory.location"),
-			start: Session.get("newStory.start")
-		}
 	}
 }

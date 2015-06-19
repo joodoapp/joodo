@@ -28,16 +28,19 @@ sidebar = {
 			.modal({
 				closable: false,
 				onShow: function(){
-					console.log(Session);
+					console.log("addStory show");
+
+				},
+				onHide: function(){
+					console.log("addStory hide");
 				},
 				onDeny: function(){
 					console.log("addStory deny");
+
 				},
 				onApprove: function(){
 					console.log("addStory approve");
 					//Need to validate
-					var story = newStory.get();
-					console.log(story);
 					//Close side menu and go to context
 					// side.close();
 					// nav.open();
@@ -59,6 +62,7 @@ Template.sidebar.events({
 // addStory MODAL TEMPLATE
 //This is the modal for adding a new story
 Template.addStory.rendered = function(e){
+
 	//Start location search
 	$(".add-story-search")
 		.search({

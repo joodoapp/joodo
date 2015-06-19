@@ -9,7 +9,7 @@ Template.login.rendered = function(){
 	//Force login each time
 	// Meteor.logout();	
 	//Open login modal
-	// login.open();
+	login.open();
 };
 Template.login.helpers({
 });
