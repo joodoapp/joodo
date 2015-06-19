@@ -1,7 +1,8 @@
 Accounts.onCreateUser(function(o,u){
 	console.log("u",u);
 	console.log("o",o);
-	u.profile.stories = [];
+	u.profile = {stories: []};
+	// u.profile.stories = [];
 	console.log("u",u);
 	return u;
 });

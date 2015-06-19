@@ -29,6 +29,10 @@ sidebar = {
 				closable: false,
 				onShow: function(){
 					console.log("addStory show");
+					//Reset inputs
+					$("#add-story-name-input").prop("value", "");
+					$("#add-story-location-input").prop("value", "");
+					$(".add-story-start-date").datepicker("setDate", new Date());
 
 				},
 				onHide: function(){

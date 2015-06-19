@@ -21,7 +21,7 @@
 		<!-- Basic Story data for adding to database -->
 		<div class="ui fluid field">
 			<!-- Text name for story [regex?] -->
-			<input class="add-story-name" type="text" name="name" placeholder="Name Your Story">
+			<input id="add-story-name-input" class="add-story-name" type="text" name="name" placeholder="Name Your Story">
 		</div>
 		<div class="two fields">
 			<!-- Location input [searchbar?] for starting -->
@@ -29,7 +29,7 @@
 					<!-- <input type="text" name="name" placeholder="Where does it start?"> -->
 					<div class="ui search add-story-search">
 						<div class="ui icon input">
-							<input class="prompt" type="text" placeholder="Where does it start?">
+							<input id="add-story-location-input" class="prompt" type="text" placeholder="Where does it start?">
 							<i class="marker icon"></i>
 						</div>
 						<div class="results">
@@ -50,7 +50,7 @@
 		<div class="actions">
 			<div class="ui two fluid inverted buttons">
 				<div class="ui red inverted cancel button">Cancel</div>
-				<div class="ui green inverted ok button">Start</div>
+				<div class="ui green inverted submit button">Start</div>
 			</div>
 		</div>
 	</div>
