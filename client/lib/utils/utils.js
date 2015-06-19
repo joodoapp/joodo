@@ -38,3 +38,26 @@ side = {
 		$(".ui.sidebar").sidebar("setting","transition","scale down").sidebar("hide");
 	}
 };
+
+
+//For addStory MODAL TEMPLATE
+newStory = {
+	init: function(){
+		//Initial newStory
+		// .name: string of name of the story
+		// .location: {lat: Number, lng: Number} of starting location
+		// .start: Date object
+		console.log("newStory init");
+		Session.setDefault("newStory.name", "");
+		Session.setDefault("newStory.location", {lat: 0, lng: 0});
+		Session.setDefault("newStory.start", new Date());
+
+	},
+	get: function(){
+		return {
+			name: Session.get("newStory.name"),
+			location: Session.get("newStory.location"),
+			start: Session.get("newStory.start")
+		}
+	}
+}

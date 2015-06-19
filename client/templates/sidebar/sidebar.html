@@ -13,20 +13,18 @@
 <!-- This is a modal -->
 <template name="addStory">
 	<div class="ui basic modal add-story-modal">
-		<div class="header">
-			<span>Add A Story</span><i class="ui large map icon"></i>
+		<div class="header"><span>Add A Story</span><i class="ui large map icon"></i></div>
 
-		</div>
 		<!-- Content [Consider adding map as background] -->
-		<form class="ui form content add-story-form">
+		<div class="ui content">
+		<form class="ui form add-story-form">
 		<!-- Basic Story data for adding to database -->
 		<div class="ui fluid field">
 			<!-- Text name for story [regex?] -->
-			<input type="text" name="name" placeholder="Name Your Story">
+			<input class="add-story-name" type="text" name="name" placeholder="Name Your Story">
 		</div>
 		<div class="two fields">
 			<!-- Location input [searchbar?] for starting -->
-			<div class="field">
 				<div class="field">
 					<!-- <input type="text" name="name" placeholder="Where does it start?"> -->
 					<div class="ui search add-story-search">
@@ -38,22 +36,16 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- Nest two date inputs together -->
+			<!-- Start date datepicker -->
 			<div class="field">
-				<div class="two fields">
-					<div class="ui icon input field">
+					<div class="ui icon input">
 						<input class="add-story-start-date" placeholder="When does it start?">
 						<i class="calendar icon"></i>
 					</div>
-					<div class="ui icon input field">
-						<input class="add-story-end-date" placeholder="Does it end?">
-						<i class="calendar icon"></i>
-					</div>
-				</div>
 			</div>
 		</div>
 		</form>
+		</div>
 		<!-- Callbacks -->
 		<div class="actions">
 			<div class="ui two fluid inverted buttons">

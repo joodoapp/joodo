@@ -1,34 +1,46 @@
 sidebar = {
-	init: function() {
-		console.log("sidebar.init");
-		var canvas = $("#timeline-canvas");
-		var svg = d3.select("#timeline-canvas")
-			.append("svg")
-			.attr("width", canvas.width())
-			.attr("height", canvas.width()*4)
+	// init: function() {
+	// 	console.log("sidebar.init");
+	// 	var canvas = $("#timeline-canvas");
+	// 	var svg = d3.select("#timeline-canvas")
+	// 		.append("svg")
+	// 		.attr("width", canvas.width())
+	// 		.attr("height", canvas.width()*4)
 
-		var c = svg.append("circle")
-			.attr("r", 10)
-			.attr("cx", 40)
-			.attr("cy",200)
-			.style({
-				"fill":"black",
-				"stroke":"gray",
-				"stroke-width":5
-			})
-		// var o = {teller: "asd",name:"name",start:new Date(),end:new Date(),chapters:[]};
-		// Meteor.call("addStory", o);
+	// 	var c = svg.append("circle")
+	// 		.attr("r", 10)
+	// 		.attr("cx", 40)
+	// 		.attr("cy",200)
+	// 		.style({
+	// 			"fill":"black",
+	// 			"stroke":"gray",
+	// 			"stroke-width":5
+	// 		})
+	// },
+	init: function() {
+		//Reset newStory Session variables
+		newStory.init();
+		//
 	},
 	addStoryModal: function() {
 		//Init both add-story-modal and add-story-date-modal
 		$(".modal.add-story-modal")
 			.modal({
 				closable: false,
+				onShow: function(){
+					console.log(Session);
+				},
 				onDeny: function(){
 					console.log("addStory deny");
 				},
 				onApprove: function(){
 					console.log("addStory approve");
+					//Need to validate
+					var story = newStory.get();
+					console.log(story);
+					//Close side menu and go to context
+					// side.close();
+					// nav.open();
 				}
 			})
 			.modal("show");
@@ -43,6 +55,9 @@ Template.sidebar.events({
 	}
 });
 
+
+// addStory MODAL TEMPLATE
+//This is the modal for adding a new story
 Template.addStory.rendered = function(e){
 	//Start location search
 	$(".add-story-search")
@@ -51,6 +66,11 @@ Template.addStory.rendered = function(e){
 		});
 	//Start date picker
 	$(".add-story-start-date").datepicker();
-	//End date picker
-	$(".add-story-end-date").datepicker();
-}
+};
+Template.addStory.events({
+	//Keep track of addStory inputs in Session variables
+	"keydown .add-story-name": function(e){
+		console.log("change addstoryname", e);
+
+	}
+});
